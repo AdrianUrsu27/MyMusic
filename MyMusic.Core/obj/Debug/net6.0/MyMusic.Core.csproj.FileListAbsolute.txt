@@ -1,0 +1,14 @@
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\bin\Debug\net6.0\MyMusic.Core.deps.json
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\bin\Debug\net6.0\MyMusic.Core.dll
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\bin\Debug\net6.0\MyMusic.Core.pdb
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\obj\Debug\net6.0\MyMusic.Core.csproj.AssemblyReference.cache
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\obj\Debug\net6.0\MyMusic.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\obj\Debug\net6.0\MyMusic.Core.AssemblyInfoInputs.cache
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\obj\Debug\net6.0\MyMusic.Core.AssemblyInfo.cs
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\obj\Debug\net6.0\MyMusic.Core.csproj.CoreCompileInputs.cache
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\obj\Debug\net6.0\MyMusic.Core.dll
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\obj\Debug\net6.0\refint\MyMusic.Core.dll
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\obj\Debug\net6.0\MyMusic.Core.pdb
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\obj\Debug\net6.0\ref\MyMusic.Core.dll
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\bin\Debug\net6.0\MyMusic.Core.runtimeconfig.json
+E:\Learning\MusicProject\MyMusic\MyMusic.Core\obj\Debug\net6.0\MyMusic.Core.genruntimeconfig.cache

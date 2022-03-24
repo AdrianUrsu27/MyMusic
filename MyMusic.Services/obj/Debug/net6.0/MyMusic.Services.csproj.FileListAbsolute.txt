@@ -1,0 +1,17 @@
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\bin\Debug\net6.0\MyMusic.Services.deps.json
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\bin\Debug\net6.0\MyMusic.Services.dll
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\bin\Debug\net6.0\MyMusic.Services.pdb
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\bin\Debug\net6.0\MyMusic.Core.dll
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\bin\Debug\net6.0\MyMusic.Core.pdb
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\obj\Debug\net6.0\MyMusic.Services.csproj.AssemblyReference.cache
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\obj\Debug\net6.0\MyMusic.Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\obj\Debug\net6.0\MyMusic.Services.AssemblyInfoInputs.cache
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\obj\Debug\net6.0\MyMusic.Services.AssemblyInfo.cs
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\obj\Debug\net6.0\MyMusic.Services.csproj.CoreCompileInputs.cache
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\obj\Debug\net6.0\MyMusic.Services.csproj.CopyComplete
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\obj\Debug\net6.0\MyMusic.Services.dll
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\obj\Debug\net6.0\refint\MyMusic.Services.dll
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\obj\Debug\net6.0\MyMusic.Services.pdb
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\obj\Debug\net6.0\ref\MyMusic.Services.dll
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\bin\Debug\net6.0\MyMusic.Services.runtimeconfig.json
+E:\Learning\MusicProject\MyMusic\MyMusic.Services\obj\Debug\net6.0\MyMusic.Services.genruntimeconfig.cache
