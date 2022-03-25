@@ -97,6 +97,39 @@ namespace MyMusic.Api.Controllers
 
             return Problem(result.Errors.First().Description, null, 500);
         }
+        [HttpDelete("User/{id}")]
+        public async Task<IActionResult> DeleteUser(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if(user is null)
+            {
+                return NotFound("User not found"); 
+            }
+            else
+            {
+                var result = await _userManager.DeleteAsync(user);
+                if(result.Succeeded)
+                { return Ok(); }
+            }
+            return NoContent();
+        }
+        [HttpDelete("Role/{id}")]
+        public async Task<IActionResult> DeleteRole(string id)
+        {
+            var role = await _roleManager.FindByIdAsync(id);
+            if (role is null)
+            {
+                return NotFound("User not found");
+            }
+            else
+            {
+                var result = await _roleManager.DeleteAsync(role);
+                if (result.Succeeded)
+                { return Ok(); }
+            }
+            return NoContent();
+        }
+
         private string GenerateJwt(User user, IList<string> roles)
         {
             var claims = new List<Claim>
