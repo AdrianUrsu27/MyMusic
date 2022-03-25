@@ -101,14 +101,14 @@ namespace MyMusic.Api.Controllers
         public async Task<IActionResult> DeleteUser(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
-            if(user is null)
+            if (user is null)
             {
-                return NotFound("User not found"); 
+                return NotFound("User not found");
             }
             else
             {
                 var result = await _userManager.DeleteAsync(user);
-                if(result.Succeeded)
+                if (result.Succeeded)
                 { return Ok(); }
             }
             return NoContent();
@@ -129,7 +129,6 @@ namespace MyMusic.Api.Controllers
             }
             return NoContent();
         }
-
         private string GenerateJwt(User user, IList<string> roles)
         {
             var claims = new List<Claim>
