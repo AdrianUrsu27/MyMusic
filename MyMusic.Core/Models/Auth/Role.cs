@@ -6,6 +6,6 @@ namespace MyMusic.Core.Models.Auth
 {
     public class Role : IdentityRole<Guid>
     {
-      
+        //public string RoleName { get; set; }
     }
 }

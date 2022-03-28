@@ -22,3 +22,4 @@ namespace MyMusic.Api.Mapping
         }
     }
 }
+

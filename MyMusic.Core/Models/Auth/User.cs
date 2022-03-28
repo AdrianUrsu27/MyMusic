@@ -12,5 +12,6 @@ namespace MyMusic.Core.Models.Auth
         
         public string FirstName { get; set; }
         public string LastName { get; set; }
+       // public Role Role { get; set; }
     }
 }

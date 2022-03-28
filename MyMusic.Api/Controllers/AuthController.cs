@@ -35,13 +35,14 @@ namespace MyMusic.Api.Controllers
         {
             var user = _mapper.Map<UserSignUpResource, User>(userSignUpResource);
             var userCreateResult = await _userManager.CreateAsync(user, userSignUpResource.Password);
-            if(userCreateResult.Succeeded)
+            if (userCreateResult.Succeeded)
             {
                 return Created(string.Empty, string.Empty);
             }
             return Problem(userCreateResult.Errors.First().Description, null, 500);
         }
         [HttpPost("SignIn")]
+        
         public async Task<IActionResult> SignIn(UserLoginResource userLoginResource)
         {
             var user = _userManager.Users.SingleOrDefault(u => u.UserName == userLoginResource.Email);
@@ -61,8 +62,9 @@ namespace MyMusic.Api.Controllers
             return BadRequest("Email or password incorrect.");
         }
         [HttpPost("Roles")]
-        
-        public async Task<IActionResult> CreateRole([FromBody]string roleName)
+        [Authorize(Roles = "Admin")]
+
+        public async Task<IActionResult> CreateRole([FromBody] string roleName)
         {
             if (string.IsNullOrWhiteSpace(roleName))
             {
@@ -83,12 +85,15 @@ namespace MyMusic.Api.Controllers
 
             return Problem(roleResult.Errors.First().Description, null, 500);
         }
-        [HttpPost("User/{userEmail}/Role")]
-        public async Task<IActionResult> AddUserToRole(string userEmail, [FromBody] string roleName)
-        {
-            var user = _userManager.Users.SingleOrDefault(u => u.UserName == userEmail);
 
-            var result = await _userManager.AddToRoleAsync(user, roleName);
+        [HttpPost("User/Role")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> AddUserToRole(AddRoleResource addRoleResource)
+        {
+            
+            var user = _userManager.Users.SingleOrDefault(u => u.UserName == addRoleResource.userEmail);
+
+            var result = await _userManager.AddToRoleAsync(user, addRoleResource.roleName);
 
             if (result.Succeeded)
             {
@@ -97,8 +102,9 @@ namespace MyMusic.Api.Controllers
 
             return Problem(result.Errors.First().Description, null, 500);
         }
-        [HttpDelete("User/{id}")]
-        public async Task<IActionResult> DeleteUser(string id)
+        [HttpDelete("User/")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteUser([FromBody]string id)
         {
             var user = await _userManager.FindByIdAsync(id);
             if(user is null)
@@ -113,8 +119,9 @@ namespace MyMusic.Api.Controllers
             }
             return NoContent();
         }
-        [HttpDelete("Role/{id}")]
-        public async Task<IActionResult> DeleteRole(string id)
+        [HttpDelete("Role/")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteRole([FromBody]string id)
         {
             var role = await _roleManager.FindByIdAsync(id);
             if (role is null)
@@ -133,12 +140,12 @@ namespace MyMusic.Api.Controllers
         private string GenerateJwt(User user, IList<string> roles)
         {
             var claims = new List<Claim>
-    {
-        new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-        new Claim(ClaimTypes.Name, user.UserName),
-        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
-    };
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+            };
 
             var roleClaims = roles.Select(r => new Claim(ClaimTypes.Role, r));
             claims.AddRange(roleClaims);
